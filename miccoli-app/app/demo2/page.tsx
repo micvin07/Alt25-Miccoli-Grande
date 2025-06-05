@@ -7,22 +7,8 @@ export const metadata = {
   }
 }
 
-import { User } from '../../model/user';
-import { Post } from '../../model/post';
-
-async function getUsers(): Promise<User[]> {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users', {
-    cache: 'no-store'
-  })
-  await new Promise((resolve) => setTimeout(resolve, 5000));
-  return res.json();
-}
-
-async function getPosts(): Promise<Post[]> {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return res.json();
-}
+import { getPosts } from '@/api/posts.api';
+import { getUsers } from '@/api/users.api';
 
 export default async function Demo2() {
   const usersData = await getUsers();

@@ -7,10 +7,10 @@ export default function Error(
 ) {
   return (
     <div>
-      <h2>Something went wrong</h2>
-      <Link href="/">Back to Home</Link>
+      <h2>Qualcosa è andato male</h2>
+      <Link href="/">Torna alla Home</Link>
       <hr/>
-      <button onClick={reset}>try again!!</button>
+      <button onClick={reset}>Prova di nuovo!!</button>
     </div>
   )
 }

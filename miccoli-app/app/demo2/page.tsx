@@ -7,32 +7,23 @@ export const metadata = {
   }
 }
 
-import { getPosts } from '@/api/posts.api';
-import { getUsers } from '@/api/users.api';
+import { Posts } from './components/posts';
+import { Users } from './components/Users';
+import { Suspense } from 'react';
 
 export default async function Demo2() {
-  const usersData = await getUsers();
-  const postsData = await getPosts();
-  
-  const [users, posts] = await Promise.all([ usersData, postsData ])
 
   return (
     <main>
       <h1>Demo 2</h1>
 
-      <h2>Users</h2>
-      {
-        users?.map(user => {
-          return <li key={user.id}>{user.name}</li>
-        })
-      }
+      <Suspense fallback={<div id="caricamento">Caricamento utenti...</div>}>
+        <Users />
+      </Suspense>
 
-      <h2>Posts</h2>
-      {
-        posts?.map(post => {
-          return <li key={post.id}>{post.title}</li>
-        })
-      }
+      <Suspense fallback={<div id="caricamento">Caricamento post...</div>}>
+        <Posts />
+      </Suspense>
     </main>
   )
 }

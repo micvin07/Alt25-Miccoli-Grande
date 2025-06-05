@@ -10,7 +10,10 @@ export const metadata = {
 import { User } from '../../model/user';
 
 async function getData(): Promise<User[]> {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const res = await fetch('https://jsonplaceholder.typicode.com/users', {
+    cache: 'no-store'
+  })
+
   return res.json();
 }
 

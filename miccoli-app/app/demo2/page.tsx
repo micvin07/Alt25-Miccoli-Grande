@@ -7,12 +7,12 @@ export const metadata = {
   }
 }
 
-import { Posts } from './components/posts';
+import { Posts } from './components/Posts';
 import { Users } from './components/Users';
 import { Suspense } from 'react';
 
 export default async function Demo2() {
-
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   return (
     <main>
       <h1>Demo 2</h1>

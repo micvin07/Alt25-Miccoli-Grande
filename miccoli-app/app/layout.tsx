@@ -9,7 +9,12 @@ const geistMono = Geist_Mono({subsets: ["latin"], variable: "--geist-mono"});
 const raleway = Raleway({subsets: ["latin"], variable: "--raleway"});
 
 export const metadata: Metadata = {
-  title: "App di Miccoli",
+  title: "Miccoli App",
+  description: "Benvenuto nell'App di Miccoli",
+  openGraph: {
+    title: "Miccoli App",
+    description: "Benvenuto nell'App di Miccoli"
+  },
 };
 
 export default function RootLayout({

@@ -7,10 +7,24 @@ export const metadata = {
   }
 }
 
-export default function Demo2() {
+import { User } from '../../model/user';
+
+async function getData(): Promise<User[]> {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  return res.json();
+}
+
+export default async function Demo2() {
+  const data = await getData();
+
   return (
-    <main className="page">
-      <h1>Demo2</h1>
+    <main>
+      <h1>Demo 2</h1>
+      {
+        data?.map(user => {
+          return <li key={user.id}>{user.name}</li>
+        })
+      }
     </main>
-  );
+  )
 }

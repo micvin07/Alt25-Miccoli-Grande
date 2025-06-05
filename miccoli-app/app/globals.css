@@ -38,6 +38,11 @@ h1 {
   font-weight: bold;
 }
 
+li {
+  margin-left: 20px;
+  font-size: 15px;
+}
+
 .page{
   @applay flex min-h-screen flex-col items-center justify-betwen p-24;
 }

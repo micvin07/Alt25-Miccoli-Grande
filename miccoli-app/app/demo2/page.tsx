@@ -20,14 +20,15 @@ async function getUsers(): Promise<User[]> {
 
 async function getPosts(): Promise<Post[]> {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-  // Simulate Latency
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return res.json();
 }
 
 export default async function Demo2() {
-  const users = await getUsers();
-  const posts = await getPosts();
+  const usersData = await getUsers();
+  const postsData = await getPosts();
+  
+  const [users, posts] = await Promise.all([ usersData, postsData ])
 
   return (
     <main>

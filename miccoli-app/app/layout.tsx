@@ -30,6 +30,7 @@ export default function RootLayout({
         <a href="./">Home</a>
         <a href="/demo1">Demo1</a>
         <a href="/demo2">Demo2</a>
+        <a href="/demo3">Demo3</a>
         <hr/>
         {children}
 

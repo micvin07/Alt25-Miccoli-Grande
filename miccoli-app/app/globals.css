@@ -55,6 +55,24 @@ li {
   font-size: 15px;  
 }
 
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  width: 100px;
+}
+
+p {
+  margin: 20px;
+  font-size: 17px;
+}
+
 .page{
   @applay flex min-h-screen flex-col items-center justify-betwen p-24;
 }

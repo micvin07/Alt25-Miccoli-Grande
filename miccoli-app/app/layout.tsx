@@ -24,15 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it">
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${raleway.className} antialiased`}>
         
         <a href="./">Home</a>
         <a href="/demo1">Demo1</a>
         <a href="/demo2">Demo2</a>
-
         <hr/>
-
         {children}
 
       </body>

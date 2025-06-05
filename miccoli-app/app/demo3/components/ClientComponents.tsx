@@ -6,6 +6,7 @@ export default function ClientComponent() {
 
   return (
     <div>
+      <h2>Client Component</h2>
       <button onClick={() => setValue(s => s+1)}>
         Add
       </button>

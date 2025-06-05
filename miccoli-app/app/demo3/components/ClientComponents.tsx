@@ -6,7 +6,6 @@ export default function ClientComponent({ children}: PropsWithChildren) {
 
   return (
     <div>
-      <h2>Client Component</h2>
       <button onClick={() => setValue(s => s+1)}>
         Add
       </button>

@@ -55,7 +55,7 @@ li {
   font-size: 15px;  
 }
 
-button {
+.bottone {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 500;
@@ -78,6 +78,28 @@ p {
   font-size: 17px;
   margin-top: 20px;
   margin-left: 20px;
+}
+
+.nome {
+  width: 200px;
+}
+
+.rimuovi {
+  margin-left: 20px;
+  font-size: 15px;
+  color: red;
+  color-background: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+table {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.riga {
+  height: 30px;
 }
 
 .page{

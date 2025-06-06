@@ -12,12 +12,12 @@ export default function Demo5() {
   return (
     <main>
      <h1>Demo 5</h1>
-      <button onClick={ () => {
+      <button className="bottone" onClick={ () => {
             let randomUsername = username[Math.floor(Math.random() * username.length)];
             dispatch({ type: "CHANGE_USERNAME", payload: randomUsername })
       }}> Cambia username </button>
 
-      <button onClick={ () => {
+      <button className="bottone" onClick={ () => {
             let randomEmail = email[Math.floor(Math.random() * email.length)];
             dispatch({ type: "CHANGE_EMAIL", payload: randomEmail })
       }}> Cambia email </button>

@@ -2,9 +2,10 @@
 
 import { LanguageContext } from './store/LanguageContextProvider';
 import React, { useContext } from 'react';
+import useUsers from './store/users.store';
 
 export default function NavBar() {
-  const { language } = useContext(LanguageContext);
+  const usersTotal = useUsers(state => state.users.length);
 
   return (
     <div>
@@ -14,6 +15,8 @@ export default function NavBar() {
       <a href="/demo3">Demo3</a>
       <a href="/demo4">Demo4</a>
       <a href="/demo5">Demo5</a>
+      <a href="/demo6">Demo6</a>
+      <a>Utenti: {usersTotal}</a>
       <hr/>
     </div>
   )

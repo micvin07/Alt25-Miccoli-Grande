@@ -6,10 +6,10 @@ export default function ClientComponent({ children}: PropsWithChildren) {
 
   return (
     <div>
-      <button onClick={() => setValue(s => s+1)}>
+      <button className="bottone" onClick={() => setValue(s => s+1)}>
         Add
       </button>
-      <button onClick={() => { if(value-1 >= 0) setValue(s => s-1) }}>
+      <button className="bottone" onClick={() => { if(value-1 >= 0) setValue(s => s-1) }}>
         Subtract
       </button>
       <p>Value: {value}</p>

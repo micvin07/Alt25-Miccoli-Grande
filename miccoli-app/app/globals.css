@@ -66,12 +66,18 @@ button {
   cursor: pointer;
   margin-left: 20px;
   margin-top: 10px;
-  width: 100px;
+  width: 200px;
 }
 
 p {
   margin: 20px;
   font-size: 17px;
+}
+
+.profile {
+  font-size: 17px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .page{

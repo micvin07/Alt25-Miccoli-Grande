@@ -5,6 +5,7 @@ import "./globals.css";
 import React from 'react';
 import NavBar from '@/app/NavBar';
 import { LanguageContextProvider } from './store/LanguageContextProvider';
+import { ProfileContextProvider } from './store/ProfileContextProvider';
 
 // creazione dei font
 const geistSans = Geist({subsets: ["latin"], variable: "--geist-sans"});
@@ -30,10 +31,12 @@ export default function RootLayout({
   return (
     <html>
       <body className={raleway.className}>
-        <LanguageContextProvider>
-          <NavBar />
-          {children}
-        </LanguageContextProvider>
+        <ProfileContextProvider>
+          <LanguageContextProvider>
+            <NavBar />
+            {children}
+          </LanguageContextProvider>
+        </ProfileContextProvider>
       </body>
     </html>
   )

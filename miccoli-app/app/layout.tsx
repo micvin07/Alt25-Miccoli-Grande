@@ -2,6 +2,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
+import React from 'react';
+import NavBar from '@/app/NavBar';
+import { LanguageContextProvider } from './store/LanguageContextProvider';
 
 // creazione dei font
 const geistSans = Geist({subsets: ["latin"], variable: "--geist-sans"});
@@ -19,22 +22,19 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${raleway.className} antialiased`}>
-        
-        <a href="./">Home</a>
-        <a href="/demo1">Demo1</a>
-        <a href="/demo2">Demo2</a>
-        <a href="/demo3">Demo3</a>
-        <hr/>
-        {children}
+ children,
+}: {
+  children: React.ReactNode
+}) {
 
+  return (
+    <html>
+      <body className={raleway.className}>
+        <LanguageContextProvider>
+          <NavBar />
+          {children}
+        </LanguageContextProvider>
       </body>
     </html>
-  );
+  )
 }
